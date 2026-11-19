@@ -1,0 +1,24 @@
+name: workshop-VIVIT
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy>=2
+  - scipy
+  - scikit-learn
+  - scikit-image
+  - matplotlib
+  - jupyterlab
+  - ipykernel
+  - pip:
+      # For an NVIDIA GPU, keep the next line (cu126 and cu130 also exist);
+      # for CPU only, delete it.
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch>=2.6
+      - torch-geometric>=2.6
+      - transformers
+      - peft
+      - safetensors
+      - av
+      - kagglehub
